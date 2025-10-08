@@ -1,4 +1,4 @@
-# 🎓 Taller de Sensores Arduino para Niños
+# 🎓 Taller de Automatización de Sensores con Telegram
 
 Bienvenidos al taller de IoT y Sensores. Aquí aprenderás a usar diferentes sensores con Arduino de forma divertida y educativa.
 
