@@ -51,7 +51,7 @@ void setup() {
   // Iniciar el sensor
   dht.begin();
   Serial.println("Sensor inicializado. Esperando lecturas...");
-  delay(2000);  // Esperar 2 segundos para que se estabilice
+  delay(100);  // Esperar 2 segundos para que se estabilice
 }
 
 void loop() {
@@ -64,7 +64,7 @@ void loop() {
   // Verificar si la lectura falló
   if (isnan(humedad) || isnan(temperatura)) {
     Serial.println("❌ Error al leer el sensor. Verifica las conexiones.");
-    delay(2000);
+    delay(100);
     return;  // Salir y volver a intentar
   }
   
@@ -118,12 +118,11 @@ void loop() {
   // ===== EXPERIMENTOS PARA PROBAR =====
   
   // 1. Alarma de calor:
-  /*
+  
   if (temperatura > 28) {
     Serial.println("¡¡¡HACE MUCHO CALOR!!!");
     // Enciende un ventilador o LED rojo
   }
-  */
   
   // 2. Monitor de confort:
   /*

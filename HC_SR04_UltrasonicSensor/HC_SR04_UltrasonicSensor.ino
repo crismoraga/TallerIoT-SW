@@ -19,15 +19,15 @@
  * CONEXIONES:
  * VCC  -> 5V de Arduino
  * GND  -> GND de Arduino
- * TRIG -> Pin 9 (puedes cambiar este número)
- * ECHO -> Pin 10 (puedes cambiar este número)
+ * TRIG -> Pin 11 (puedes cambiar este número)
+ * ECHO -> Pin 12 (puedes cambiar este número)
  * 
  * ========================================
  */
 
 // Define los pines que usaremos
-const int pinTrigger = 9;   // Pin que envía el sonido
-const int pinEcho = 10;     // Pin que recibe el sonido
+const int pinTrigger = 11;   // Pin que envía el sonido
+const int pinEcho = 12;     // Pin que recibe el sonido
 
 // Variables para guardar datos
 long duracion;              // Tiempo que tarda el sonido

@@ -8,7 +8,7 @@ Bienvenidos al taller de IoT y Sensores. Aquí aprenderás a usar diferentes sen
 
 ### 1. 📏 HC-SR04 - Sensor Ultrasónico
 
-**Archivo:** `HC_SR04_UltrasonicSensor.ino`
+**Carpeta:** `HC_SR04_UltrasonicSensor`
 
 **¿Qué hace?**
 - Mide distancias como los murciélagos (usando sonido)
@@ -18,8 +18,8 @@ Bienvenidos al taller de IoT y Sensores. Aquí aprenderás a usar diferentes sen
 ```
 VCC  → 5V
 GND  → GND
-TRIG → Pin 9
-ECHO → Pin 10
+TRIG → Pin 11
+ECHO → Pin 12
 ```
 
 **Diagrama de Conexión:**
@@ -32,63 +32,9 @@ ECHO → Pin 10
 - 📊 Medidor de altura
 
 ---
+### 2. 🌡️ DHT11 - Sensor de Temperatura y Humedad
 
-### 2. 🌧️ MH-Sensor-Series - Sensor de Lluvia
-
-**Archivo:** `MH_SensorSeries_RainSensor.ino`
-
-**¿Qué hace?**
-- Detecta cuando cae agua o lluvia
-- Mide la intensidad (poca, media, mucha lluvia)
-
-**Conexiones:**
-```
-VCC → 5V
-GND → GND
-AO  → Pin A0
-DO  → Pin 2
-```
-
-**Diagrama de Conexión:**
-
-![Diagrama MH-Sensor](./diaagrama_sensor_MH-Sensor-Series.png)
-
-**Experimentos sugeridos:**
-- ☔ Alarma de lluvia
-- 🪟 Cierre automático de ventanas
-- 🌱 Sistema de riego inteligente
-
----
-
-### 3. 💧 Sensor de Nivel de Agua
-
-**Archivo:** `WaterLevelSensor.ino`
-
-**¿Qué hace?**
-- Mide qué tan lleno está un tanque
-- Detecta nivel bajo, medio y alto
-
-**Conexiones:**
-```
-+ (VCC) → 5V
-- (GND) → GND
-S       → Pin A1
-```
-
-**Diagrama de Conexión:**
-
-![Diagrama Nivel Agua](./diagrama_sensor_movimiento.png)
-
-**Experimentos sugeridos:**
-- 🐠 Monitor de acuario
-- 🚰 Alarma de tanque vacío
-- 🌿 Sistema de riego automático
-
----
-
-### 4. 🌡️ DHT11 - Sensor de Temperatura y Humedad
-
-**Archivo:** `DHT11_TemperatureHumidity.ino`
+**Carpeta:** `DHT11_TemperatureHumidity`
 
 **¿Qué hace?**
 - Mide temperatura del aire (°C)
@@ -97,14 +43,13 @@ S       → Pin A1
 **Conexiones:**
 ```
 Pin 1 (VCC)  → 5V
-Pin 2 (DATA) → Pin 7
-Pin 3 (NC)   → No conectar
-Pin 4 (GND)  → GND
+Pin 2 (DATA) → Pin 2
+Pin 3 (GND)  → GND
 ```
 
 **Diagrama de Conexión:**
 
-![Diagrama DHT11](./diagrama_sensor_humedad.png)
+![Diagrama DHT11](./diagrama_sensor_humedad_temperatura.png)
 
 **⚠️ IMPORTANTE:** Necesitas instalar librerías:
 1. Abre Arduino IDE
@@ -122,7 +67,7 @@ Pin 4 (GND)  → GND
 
 ### 5. 👋 HC-SR501 - Sensor de Movimiento PIR
 
-**Archivo:** `HC_SR501_PIRMotionSensor.ino`
+**Carpeta:** `HC_SR501_PIRMotionSensor`
 
 **¿Qué hace?**
 - Detecta personas o animales en movimiento
@@ -131,7 +76,7 @@ Pin 4 (GND)  → GND
 **Conexiones:**
 ```
 VCC → 5V
-OUT → Pin 8
+OUT → Pin 2
 GND → GND
 ```
 
@@ -150,40 +95,13 @@ GND → GND
 - 🚨 Alarma de seguridad
 - 🔢 Contador de personas
 
----
-
-### 6. 📸 AL422B - Módulo de Cámara (AVANZADO)
-
-**Archivo:** `AL422B_CameraModule.ino`
-
-**¿Qué hace?**
-- Captura imágenes
-- Guarda en memoria temporal
-
-**⚠️ ADVERTENCIA:** Este sensor es MUY COMPLEJO
-- Requiere 12+ pines
-- Necesita Arduino Mega (no Uno)
-- Requiere tarjeta SD
-- Necesita librerías especiales
-
-**Diagrama de Conexión (ejemplo):**
-
-![Diagrama Cámara](./diagrama_sensor_infrarrojo.png)
-
-**Recomendación para principiantes:**
-- Empieza con los otros sensores primero
-- Considera usar ESP32-CAM como alternativa más fácil
-- Este archivo es principalmente educativo
-
----
 
 ## 🚀 Cómo Empezar
 
-### Paso 1: Instalar Arduino IDE
+### Paso 1: Abre Arduino IDE
 
-1. Descarga Arduino IDE desde [arduino.cc](https://www.arduino.cc/en/software)
-2. Instálalo en tu computadora
-3. Abre el programa
+1. Busca "Arduino" en el menú inicio
+2. Abre la aplicación Arduino IDE
 
 ### Paso 2: Conectar Arduino
 
@@ -193,7 +111,7 @@ GND → GND
 
 ### Paso 3: Abrir un Archivo
 
-1. Abre uno de los archivos `.ino` de este taller
+1. Abre uno de los archivos `.ino` de este taller, dependiendo del sensor que quieras te tocó
 2. Lee las explicaciones en los comentarios
 3. Conecta el sensor según las instrucciones
 
@@ -281,22 +199,6 @@ Combina varios sensores para crear:
 - Pide ayuda a un adulto si no estás seguro
 - Desconecta el Arduino antes de cambiar conexiones
 
----
-
-## 📝 Lista de Verificación
-
-Antes de cada sesión, asegúrate de tener:
-
-- [ ] Arduino conectado a la computadora
-- [ ] Cable USB funcionando
-- [ ] Arduino IDE instalado
-- [ ] Librerías instaladas (si usas DHT11)
-- [ ] Sensor correctamente conectado
-- [ ] Monitor Serial abierto
-- [ ] ¡Muchas ganas de aprender!
-
----
-
 ## 🎉 Diviértete
 
 Recuerda: **No hay preguntas tontas, solo curiosidad por aprender.**
@@ -307,5 +209,4 @@ La programación y electrónica se aprenden **haciendo y experimentando**.
 
 ---
 
-**Creado para el Taller de IoT y Software** 🚀  
-*Versión educativa para niños y principiantes*
+**Creado con ❤️ para el Taller de IoT y Software** 🚀  
